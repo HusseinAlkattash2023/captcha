@@ -41,7 +41,12 @@
   }
   
   .errmsg {
-    color: black;
+    color: red;
+    padding: 5px;
+    transition: 0.5s ease;
+  }
+  .donemsg{
+    color: green;
     padding: 5px;
     transition: 0.5s ease;
   }

@@ -16,6 +16,7 @@ function createCaptcha() {
 function validateCaptcha() {
     const errCaptcha = document.getElementById("errCaptcha");
     const reCaptcha = document.getElementById("reCaptcha");
+    const doneCaptcha = document.getElementById("doneCaptcha");
     recaptcha = reCaptcha.value;
     let validateCaptcha = 0;
     for (var z = 0; z < 6; z++) {
@@ -25,9 +26,12 @@ function validateCaptcha() {
     }
     if (recaptcha == "") {
       errCaptcha.innerHTML = "Re-Captcha must be filled";
+      doneCaptcha.innerHTML = "";
     } else if (validateCaptcha > 0 || recaptcha.length > 6) {
       errCaptcha.innerHTML = "Wrong captcha";
+      doneCaptcha.innerHTML = "";
     } else {
-      errCaptcha.innerHTML = "Done";
+        doneCaptcha.innerHTML = "Done";
+        errCaptcha.innerHTML = ""
     }
   }
